@@ -1,0 +1,139 @@
+164916	16:39:41.292	0.00157785	Gppw.exe	IRP_MJ_WRITE                        	COM9	SUCCESS	Length: 13, Data: 02 45 30 30 30 45 31 34 30 36 03 45 38 	
+164917	16:39:41.292	0.05945532	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 02 	
+164918	16:39:41.352	0.00000615	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 31 	
+164919	16:39:41.352	0.00000391	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 37 	
+164920	16:39:41.352	0.00000391	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 30 	
+164921	16:39:41.352	0.00000391	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 30 	
+164922	16:39:41.352	0.00000391	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 31 	
+164923	16:39:41.352	0.00000363	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 36 	
+164924	16:39:41.352	0.00000391	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 30 	
+164925	16:39:41.352	0.00000363	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 30 	
+164926	16:39:41.352	0.00000363	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 32 	
+164927	16:39:41.352	0.00000363	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 35 	
+164928	16:39:41.352	0.00000363	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 30 	
+164929	16:39:41.352	0.00000363	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 30 	
+164930	16:39:41.352	0.00000363	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 03 	
+164931	16:39:41.352	0.00000335	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 35 	
+164932	16:39:41.352	0.00000363	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 39 	
+164933	16:39:41.352	0.00176279	Gppw.exe	IOCTL_SERIAL_CLR_DTR                	COM9	SUCCESS		
+164934	16:39:41.352	0.00189018	Gppw.exe	IOCTL_SERIAL_CLR_RTS                	COM9	SUCCESS		
+164935	16:39:41.352	0.00196757	Gppw.exe	IOCTL_SERIAL_SET_DTR                	COM9	SUCCESS		
+164936	16:39:41.352	0.00235393	Gppw.exe	IOCTL_SERIAL_SET_RTS                	COM9	SUCCESS		
+164937	16:39:41.352	0.00014359	Gppw.exe	IOCTL_SERIAL_PURGE                  	COM9	SUCCESS	Purge: TXCLEAR RXCLEAR	
+164938	16:39:41.362	0.00148985	Gppw.exe	IRP_MJ_WRITE                        	COM9	SUCCESS	Length: 13, Data: 02 45 30 30 30 31 43 30 30 31 03 44 44 	
+164939	16:39:41.362	0.04338065	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 02 	
+164940	16:39:41.402	0.00001006	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 30 	
+164941	16:39:41.402	0.00000503	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 41 	
+164942	16:39:41.402	0.00000447	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 03 	
+164943	16:39:41.402	0.00000391	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 37 	
+164944	16:39:41.402	0.00000419	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 34 	
+165786	16:39:42.874	0.00242796	Gppw.exe	IRP_MJ_WRITE                        	COM9	SUCCESS	Length: 13, Data: 02 45 30 30 30 31 43 30 30 31 03 44 44 	
+165787	16:39:42.884	0.04274873	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 02 	
+165788	16:39:42.924	0.00000587	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 30 	
+165789	16:39:42.924	0.00000363	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 41 	
+165790	16:39:42.924	0.00000335	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 03 	
+165791	16:39:42.924	0.00000335	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 37 	
+165792	16:39:42.924	0.00000335	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 34 	
+165793	16:39:42.924	0.00193460	Gppw.exe	IOCTL_SERIAL_CLR_DTR                	COM9	SUCCESS		
+165794	16:39:42.924	0.00236483	Gppw.exe	IOCTL_SERIAL_CLR_RTS                	COM9	SUCCESS		
+165795	16:39:42.924	0.00195639	Gppw.exe	IOCTL_SERIAL_SET_DTR                	COM9	SUCCESS		
+165796	16:39:42.924	0.00156277	Gppw.exe	IOCTL_SERIAL_SET_RTS                	COM9	SUCCESS		
+165797	16:39:42.934	0.00000531	Gppw.exe	IOCTL_SERIAL_PURGE                  	COM9	SUCCESS	Purge: TXCLEAR RXCLEAR	
+165798	16:39:42.934	0.00196813	Gppw.exe	IRP_MJ_WRITE                        	COM9	SUCCESS	Length: 13, Data: 02 45 30 30 30 45 30 36 30 32 03 45 35 	
+165799	16:39:42.934	0.05125847	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 02 	
+165800	16:39:42.984	0.00000587	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 31 	
+165801	16:39:42.984	0.00000391	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 30 	
+165802	16:39:42.984	0.00000363	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 30 	
+165803	16:39:42.984	0.00000335	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 30 	
+165804	16:39:42.984	0.00000335	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 03 	
+165805	16:39:42.984	0.00000335	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 43 	
+165806	16:39:42.984	0.00000335	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 34 	
+165807	16:39:42.984	0.00200137	Gppw.exe	IOCTL_SERIAL_CLR_DTR                	COM9	SUCCESS		
+165808	16:39:42.984	0.00191309	Gppw.exe	IOCTL_SERIAL_CLR_RTS                	COM9	SUCCESS		
+165809	16:39:42.984	0.00158735	Gppw.exe	IOCTL_SERIAL_SET_DTR                	COM9	SUCCESS		
+165810	16:39:42.984	0.00172564	Gppw.exe	IOCTL_SERIAL_SET_RTS                	COM9	SUCCESS		
+165811	16:39:42.994	0.00000503	Gppw.exe	IOCTL_SERIAL_PURGE                  	COM9	SUCCESS	Purge: TXCLEAR RXCLEAR	
+165812	16:39:42.994	0.00194103	Gppw.exe	IRP_MJ_WRITE                        	COM9	SUCCESS	Length: 13, Data: 02 45 30 31 38 30 30 38 30 38 03 45 31 	
+165813	16:39:42.994	0.05851666	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 02 	
+165814	16:39:43.054	0.00000475	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 32 	
+165815	16:39:43.054	0.00000251	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 30 	
+165816	16:39:43.054	0.00000279	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 32 	
+165817	16:39:43.054	0.00000223	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 30 	
+165818	16:39:43.054	0.00000251	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 32 	
+165819	16:39:43.054	0.00000223	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 30 	
+165820	16:39:43.054	0.00000251	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 32 	
+165821	16:39:43.054	0.00000223	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 30 	
+165822	16:39:43.054	0.00000251	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 32 	
+165823	16:39:43.054	0.00000251	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 30 	
+165824	16:39:43.054	0.00000223	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 32 	
+165825	16:39:43.054	0.00000251	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 30 	
+165826	16:39:43.054	0.00000251	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 32 	
+165827	16:39:43.054	0.00000251	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 30 	
+165828	16:39:43.054	0.00000279	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 32 	
+165829	16:39:43.054	0.00000251	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 30 	
+165830	16:39:43.054	0.00000251	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 03 	
+165831	16:39:43.054	0.00000251	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 31 	
+165832	16:39:43.054	0.00000251	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 33 	
+165833	16:39:43.054	0.00181252	Gppw.exe	IOCTL_SERIAL_CLR_DTR                	COM9	SUCCESS		
+165834	16:39:43.054	0.00197651	Gppw.exe	IOCTL_SERIAL_CLR_RTS                	COM9	SUCCESS		
+165835	16:39:43.054	0.00194243	Gppw.exe	IOCTL_SERIAL_SET_DTR                	COM9	SUCCESS		
+165836	16:39:43.054	0.00197846	Gppw.exe	IOCTL_SERIAL_SET_RTS                	COM9	SUCCESS		
+165837	16:39:43.054	0.00000363	Gppw.exe	IOCTL_SERIAL_PURGE                  	COM9	SUCCESS	Purge: TXCLEAR RXCLEAR	
+165838	16:39:43.054	0.00166194	Gppw.exe	IRP_MJ_WRITE                        	COM9	SUCCESS	Length: 13, Data: 02 45 30 30 30 45 43 43 30 32 03 30 35 	
+165839	16:39:43.064	0.05104084	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 02 	
+165840	16:39:43.114	0.00000587	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 31 	
+165841	16:39:43.114	0.00000363	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 30 	
+165842	16:39:43.114	0.00000335	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 30 	
+165843	16:39:43.114	0.00000335	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 30 	
+165844	16:39:43.114	0.00000335	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 03 	
+165845	16:39:43.114	0.00000335	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 43 	
+165846	16:39:43.114	0.00000307	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 34 	
+165847	16:39:43.114	0.00189493	Gppw.exe	IOCTL_SERIAL_CLR_DTR                	COM9	SUCCESS		
+165848	16:39:43.114	0.00189018	Gppw.exe	IOCTL_SERIAL_CLR_RTS                	COM9	SUCCESS		
+165849	16:39:43.114	0.00194941	Gppw.exe	IOCTL_SERIAL_SET_DTR                	COM9	SUCCESS		
+165850	16:39:43.114	0.00215027	Gppw.exe	IOCTL_SERIAL_SET_RTS                	COM9	SUCCESS		
+165851	16:39:43.124	0.00000503	Gppw.exe	IOCTL_SERIAL_PURGE                  	COM9	SUCCESS	Purge: TXCLEAR RXCLEAR	
+165852	16:39:43.124	0.13202851	Gppw.exe	IRP_MJ_WRITE                        	COM9	SUCCESS	Length: 141, Data: 02 45 31 31 38 30 30 30 34 30 31 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 32 30 32 30 32 30 32 30 32 30 32 30 32 30 32 30 32 30 32 30 32 30 32 30 32 30 32 30 32 30 32 30 32 30 32 30 32 30 	
+165853	16:39:43.254	0.04408940	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 06 	
+165854	16:39:43.295	0.00183459	Gppw.exe	IOCTL_SERIAL_CLR_DTR                	COM9	SUCCESS		
+165855	16:39:43.295	0.00210530	Gppw.exe	IOCTL_SERIAL_CLR_RTS                	COM9	SUCCESS		
+165856	16:39:43.305	0.00195304	Gppw.exe	IOCTL_SERIAL_SET_DTR                	COM9	SUCCESS		
+165857	16:39:43.305	0.00197679	Gppw.exe	IOCTL_SERIAL_SET_RTS                	COM9	SUCCESS		
+165858	16:39:43.305	0.00000363	Gppw.exe	IOCTL_SERIAL_PURGE                  	COM9	SUCCESS	Purge: TXCLEAR RXCLEAR	
+165859	16:39:43.305	0.04461154	Gppw.exe	IRP_MJ_WRITE                        	COM9	SUCCESS	Length: 69, Data: 02 45 31 31 38 30 34 30 31 43 39 30 30 31 46 45 30 33 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 30 	
+165860	16:39:43.345	0.05806017	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 06 	
+165861	16:39:43.405	0.00191309	Gppw.exe	IOCTL_SERIAL_CLR_DTR                	COM9	SUCCESS		
+165862	16:39:43.405	0.00195472	Gppw.exe	IOCTL_SERIAL_CLR_RTS                	COM9	SUCCESS		
+165863	16:39:43.415	0.00196338	Gppw.exe	IOCTL_SERIAL_SET_DTR                	COM9	SUCCESS		
+165864	16:39:43.415	0.00197735	Gppw.exe	IOCTL_SERIAL_SET_RTS                	COM9	SUCCESS		
+165865	16:39:43.415	0.00000335	Gppw.exe	IOCTL_SERIAL_PURGE                  	COM9	SUCCESS	Purge: TXCLEAR RXCLEAR	
+165866	16:39:43.415	0.00206060	Gppw.exe	IRP_MJ_WRITE                        	COM9	SUCCESS	Length: 5, Data: 02 42 03 34 35 	
+165867	16:39:43.415	0.02960181	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 06 	
+165868	16:39:43.445	0.00784932	Gppw.exe	IOCTL_SERIAL_CLR_DTR                	COM9	SUCCESS		
+165869	16:39:43.455	0.00197595	Gppw.exe	IOCTL_SERIAL_CLR_RTS                	COM9	SUCCESS		
+165870	16:39:43.455	0.00197204	Gppw.exe	IOCTL_SERIAL_SET_DTR                	COM9	SUCCESS		
+165871	16:39:43.455	0.00209915	Gppw.exe	IOCTL_SERIAL_SET_RTS                	COM9	SUCCESS		
+165872	16:39:43.465	0.00000335	Gppw.exe	IOCTL_SERIAL_PURGE                  	COM9	SUCCESS	Purge: TXCLEAR RXCLEAR	
+165873	16:39:43.465	0.00204579	Gppw.exe	IRP_MJ_WRITE                        	COM9	SUCCESS	Length: 11, Data: 02 30 30 45 30 32 30 32 03 36 43 	
+165874	16:39:43.465	0.04403129	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 02 	
+165875	16:39:43.505	0.00000419	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 46 	
+165876	16:39:43.505	0.00000251	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 36 	
+165877	16:39:43.505	0.00000251	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 35 	
+165878	16:39:43.505	0.00000251	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 45 	
+165879	16:39:43.505	0.00000251	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 03 	
+165880	16:39:43.505	0.00000251	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 46 	
+165881	16:39:43.505	0.00000279	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 39 	
+165882	16:39:43.515	0.00304173	Gppw.exe	IOCTL_SERIAL_CLR_DTR                	COM9	SUCCESS		
+165883	16:39:43.515	0.00197539	Gppw.exe	IOCTL_SERIAL_CLR_RTS                	COM9	SUCCESS		
+165884	16:39:43.515	0.00197371	Gppw.exe	IOCTL_SERIAL_SET_DTR                	COM9	SUCCESS		
+165885	16:39:43.515	0.00198908	Gppw.exe	IOCTL_SERIAL_SET_RTS                	COM9	SUCCESS		
+165886	16:39:43.515	0.00000307	Gppw.exe	IOCTL_SERIAL_PURGE                  	COM9	SUCCESS	Purge: TXCLEAR RXCLEAR	
+165887	16:39:43.515	0.00212317	Gppw.exe	IRP_MJ_WRITE                        	COM9	SUCCESS	Length: 11, Data: 02 30 30 45 43 41 30 32 03 38 45 	
+165888	16:39:43.525	0.04334350	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 02 	
+165889	16:39:43.565	0.00000615	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 46 	
+165890	16:39:43.565	0.00000391	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 36 	
+165891	16:39:43.565	0.00000391	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 35 	
+165892	16:39:43.565	0.00000335	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 45 	
+165893	16:39:43.565	0.00000335	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 03 	
+165894	16:39:43.565	0.00000335	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 46 	
+165895	16:39:43.575	0.00000587	Gppw.exe	IRP_MJ_READ                         	COM9	SUCCESS	Length: 1, Data: 39 	

@@ -1,0 +1,62 @@
+0x8000000 	0x40000 256k	0x8000000~0x803FFFF
+0x20000000	0xC000	48k
+
+
+
+0x0		0x80000
+0x10000000	0x8000
+
+1.验证： 读E01从8000和8040开始每个程序配置是否一样？
+2.验证： 读E00从0E00、E40、E80、EC0开始每个程序配置是否一样？及是否等于D8000。
+
+ld x001
+mov k150z0 d135数据
+end
+
+ld x002
+mov h0c8e d8120数据
+end
+
+ASCI指令	***
+
+rs指令		***
+
+hex 指令	***
+
+DTO 指令
+DFROM
+FROM
+TO
+MC 		***
+MCR 		***
+SFTL M21 M200 K12 K1	***
+SFTR M300 M300 K16 K1	***
+FOR H7
+NEXT
+
+
+1978	21:08:11.250	0.00249613	Gppw.exe	IRP_MJ_WRITE                        	COM6	SUCCESS	Length: 15, Data: 02 45 34 31 38 30 35 43 30 46 30 30 03 36 33 	
+1979	21:08:11.260	0.03461250	Gppw.exe	IRP_MJ_READ                         	COM6	SUCCESS	Length: 1, Data: 02 	
+1980	21:08:11.290	0.00000615	Gppw.exe	IRP_MJ_READ                         	COM6	SUCCESS	Length: 1, Data: 31 	
+1981	21:08:11.290	0.00000279	Gppw.exe	IRP_MJ_READ                         	COM6	SUCCESS	Length: 1, Data: 38 	
+1982	21:08:11.290	0.00000251	Gppw.exe	IRP_MJ_READ                         	COM6	SUCCESS	Length: 1, Data: 30 	
+1983	21:08:11.290	0.00000475	Gppw.exe	IRP_MJ_READ                         	COM6	SUCCESS	Length: 1, Data: 36 	
+1984	21:08:11.290	0.00000279	Gppw.exe	IRP_MJ_READ                         	COM6	SUCCESS	Length: 1, Data: 34 	
+1985	21:08:11.290	0.00000279	Gppw.exe	IRP_MJ_READ                         	COM6	SUCCESS	Length: 1, Data: 03 	
+1986	21:08:11.290	0.00000279	Gppw.exe	IRP_MJ_READ                         	COM6	SUCCESS	Length: 1, Data: 30 	
+1987	21:08:11.290	0.00000279	Gppw.exe	IRP_MJ_READ                         	COM6	SUCCESS	Length: 1, Data: 36 	
+1988	21:08:11.290	0.00253161	Gppw.exe	IOCTL_SERIAL_CLR_DTR                	COM6	SUCCESS		
+1989	21:08:11.290	0.00169714	Gppw.exe	IOCTL_SERIAL_CLR_RTS                	COM6	SUCCESS		
+1990	21:08:11.300	0.00173262	Gppw.exe	IOCTL_SERIAL_SET_DTR                	COM6	SUCCESS		
+1991	21:08:11.300	0.00194829	Gppw.exe	IOCTL_SERIAL_SET_RTS                	COM6	SUCCESS		
+1992	21:08:11.300	0.00000587	Gppw.exe	IOCTL_SERIAL_PURGE                  	COM6	SUCCESS	Purge: TXCLEAR RXCLEAR	
+1993	21:08:11.300	0.00216229	Gppw.exe	IRP_MJ_WRITE                        	COM6	SUCCESS	Length: 13, Data: 02 45 30 31 38 30 36 36 30 32 03 44 46 	
+1994	21:08:11.300	0.01990365	Gppw.exe	IRP_MJ_READ                         	COM6	SUCCESS	Length: 1, Data: 02 	
+1995	21:08:11.321	0.00000615	Gppw.exe	IRP_MJ_READ                         	COM6	SUCCESS	Length: 1, Data: 46 	
+1996	21:08:11.321	0.01450771	Gppw.exe	IRP_MJ_READ                         	COM6	SUCCESS	Length: 1, Data: 46 	
+1997	21:08:11.341	0.00000643	Gppw.exe	IRP_MJ_READ                         	COM6	SUCCESS	Length: 1, Data: 46 	
+1998	21:08:11.341	0.00000615	Gppw.exe	IRP_MJ_READ                         	COM6	SUCCESS	Length: 1, Data: 46 	
+1999	21:08:11.341	0.00000307	Gppw.exe	IRP_MJ_READ                         	COM6	SUCCESS	Length: 1, Data: 03 	
+2000	21:08:11.341	0.00000279	Gppw.exe	IRP_MJ_READ                         	COM6	SUCCESS	Length: 1, Data: 31 	
+2001	21:08:11.341	0.00000279	Gppw.exe	IRP_MJ_READ                         	COM6	SUCCESS	Length: 1, Data: 42 	
+

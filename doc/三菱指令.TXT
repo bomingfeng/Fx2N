@@ -1,0 +1,443 @@
+pmw 文件的格式说明 
+输入、输出端口号按8进制。程序开始地址:15CH 
+如：X0-X7   -> 0-7(H)    X40-X47 -> 20-27(H)   X80-X87   -> 40-47(H) 
+     X10-X17 -> 8-F(H)    X50-X57 -> 28-2F(H)   X90-X97   -> 48-4F(H) 
+     X20-X27 -> 10-17(H)  X60-X67 -> 30-37(H)   X100-X107 -> 50-57(H)  
+     X30-X37 -> 18-1F(H)  X70-X77 -> 38-3F(H)   X110-X117 -> 58-5F(H) 
+
+
+存储格式为：
+           0E 24 
+           |  | 
+           |  -指令 
+           | 
+           ----操作数 
+
+
+
+指令对应16进制依次为： 
+
+
+           X   X 
+           |   | 
+           |   -0：Sx(特殊寄存器、状态寄存器) 
+           |   -4: Xx(输入) 
+           |   -5: Yx(输出) 
+           |   -6: Tx(定时器) 
+           |   -8: Mx(数据存储器、辅助继电器) 
+           |   -E: Cx(计数器) 
+           | 
+           |----2: LD 
+           |----3: LDI 
+           |----4: AND 
+           |----5: ANI 
+           |----6: OR 
+           |----7: ORI 
+           |----C: OUT 
+           |----D: SET 
+           |--8x 寄存器 00 0C      : RST T/C 
+           |--Ex 端口              : RST Y/M 
+           |--E(x>=8)  yy          : RST M(xyy-800) (M0-M1535) 
+           |--Ax yy 00 04          : RST M(xyy-200) (M1536-M3071) 
+
+           |--8F xx 00 04          : RST M8xxx      (M8000-M8255)
+
+           |--86 xx 86 yy 00 0D    : RST D(XXYY/2) (D0-D1998)
+           |--88 xx 86 yy 00 0D    : RST D(XXYY/2)+1000 (D1000-D7999)
+           |--80 xx 86 yy 00 0D    : RST D(XXYY/2)+8000 (D8000-D8195)
+
+           |                             |-D8028   :Z0
+           |                             |-D8029   :V0
+
+           |                             |-D8182   :Z1
+
+           |                             |-D8183   :V1
+           |                             |-D8184   :Z2
+           |                             |-D8185   :V2
+           |                             |-D8186   :Z3
+           |                             |-D8187   :V3
+           |                             |-D8188   :Z4
+           |                             |-D8189   :V4
+
+           |                             |-D8190   :Z5
+           |                             |-D8191   :V5
+           |                             |-D8192   :Z6
+           |                             |-D8193   :V6
+           |                             |-D8194   :Z7
+           |                             |-D8195   :V7
+           |--8x 寄存器 00 07      : RST Sx
+           |--8x 端口   01 CA      : LDP
+           |--8x 端口   01 CB      : LDF
+           |--8x 端口   01 CC      : ANDP
+           |--8x 端口   01 CD      : ANDF
+           |--8x 端口   01 CE      : ORP
+           |--8x 端口   01 CF      : ORF
+           |--8x 端口   00 08      : PLS
+           |--8x 端口   00 09      : PLF
+           |--8x 端口   80 0x 00 0A: MC Nx Yx/Mx
+           |               |-Nx
+           |     
+           |------------80 0x 00 0B: MCR Nx
+
+           |               |-Nx
+           |
+           |----80 yy 80 xx 06 zz  : OUT TzzKyyxx
+           |----80 yy 80 xx 0E zz  : OUT CzzKyyxx
+           |--FF F8                : ANB
+           |--FF F9                : ORB
+           |--FF FA                : MPS
+           |--FF FB                : MRD
+           |--FF FC                : MPP
+           |--FF FD                : INV
+           |--00 0F                : END 
+LD Xxx 24 xx 
+LD Yxx 25 xx 
+
+LD M0-M1535 2x yy LD M(xyy-800)						/*
+28 00 
+2D FF 
+
+LD M1536-M3071 Ax yy 01 C2 LD M(xyy-200)
+A8 00 
+AD FF 
+
+LD M8000-M8255 2F xx LD M8xxx						/*
+2F 00 
+2F FF 
+
+LD S0-S999 2x xx LD Sxxx
+20 00 
+23 E7 
+LD T0-T255 2x xx LD Txx
+26 00 
+26 FF 
+LD C0-C255 2x xx LD Cxx
+2E 00 
+2E FF
+LDP Xxx 84 xx 01 CA 
+LDP Yxx 85 xx 01 CA 
+LDP M0-M1535 8x yy 01 CA LDP M(xyy-800)
+88 00 
+8D FF 
+LDP M1536-M3071 Ax yy 01 CA LDP M(xyy-200)
+A8 00 
+AD FF 
+LDP M8000-M8255 8F xx 01 CA LDP Mxx
+8F 00 
+8F FF 
+LDP S0-S999 8x yy 01 CA LDP Sxxx
+80 00 
+83 E7 
+LDP T0-T255 8x yy 01 CA LDP Txx
+86 00 
+86 FF 
+LDP C0-C255 8x yy 01 CA LDP Cxx
+8E 00 
+8E FF 
+LDI Xxx 34 xx 
+LDI Yxx 35 xx 
+LDI M0-M1535 3x yy LDI M(xyy-800)
+38 00 
+3D FF 
+LDI M1536-M3071 Ax yy 01 C3 LDI M(xyy-200)
+A8 00 
+AD FF 
+LDI M8000-M8255 3F xx LDI Mxx
+3F 00 
+3F FF 
+LDI S0-S999 3x xx LDI Sxxx
+30 00 
+33 E7 
+LDI T0-T255 3x xx LDI Txx
+36 00 
+36 FF 
+LDI C0-C255 3x xx LDI Cxx
+3E 00 
+3E FF
+LDF Xxx 84 xx 01 CB 
+LDF Yxx 85 xx 01 CB 
+LDF M0-M1535 8x yy 01 CB LDF M(xyy-800)
+88 00 
+8D FF 
+LDF M1536-M3071 Ax yy 01 CB LDF M(xyy-200)
+A8 00 
+AD FF 
+LDF M8000-M8255 8F xx 01 CB LDF Mxx
+8F 00 
+8F FF 
+LDF S0-S999 8x yy 01 CB LDF Sxxx
+80 00 
+83 E7 
+LDF T0-T255 8x yy 01 CB LDF Txx
+86 00 
+86 FF 
+LDF C0-C255 8x yy 01 CB LDF Cxx
+
+8E 00 
+8E FF 
+AND Xxx 44 xx 
+AND Yxx 45 xx 
+AND M0-M1535 4x yy AND M(xyy-800)
+48 00 
+4D FF 
+AND M1536-M3071 Ax yy 01 C4 AND M(xyy-200)
+A8 00 
+AD FF 
+AND M8000-M8255 4F xx AND Mxx
+4F 00 
+4F FF 
+AND S0-S999 4x xx AND Sxxx
+40 00 
+43 E7 
+AND T0-T255 4x xx AND Txx
+46 00 
+46 FF 
+AND C0-C255 4x xx AND Cxx
+4E 00 
+4E FF
+ANDP Xxx 84 xx 01 CC 
+ANDP Yxx 85 xx 01 CC 
+ANDP M0-M1535 8x yy 01 CC ANDP M(xyy-800)
+88 00 
+8D FF 
+ANDP M1536-M3071 Ax yy 01 CC ANDP M(xyy-200)
+A8 00 
+AD FF 
+ANDP M8000-M8255 8F xx 01 CC ANDP Mxx
+8F 00 
+8F FF 
+ANDP S0-S999 8x yy 01 CC ANDP Sxxx
+80 00 
+83 E7 
+ANDP T0-T255 8x yy 01 CC ANDP Txx
+86 00 
+86 FF 
+ANDP C0-C255 8x yy 01 CC ANDP Cxx
+8E 00 
+8E FF
+ANI Xxx 54 xx 
+ANI Yxx 55 xx 
+ANI M0-M1535 5x yy ANI M(xyy-800)
+58 00 
+5D FF 
+ANI M1536-M3071 Ax yy 01 C5 ANI M(xyy-200)
+A8 00 
+AD FF 
+ANI M8000-M8255 5F xx ANI Mxx
+5F 00 
+5F FF 
+ANI S0-S999 5x xx ANI Sxxx
+50 00 
+53 E7 
+ANI T0-T255 5x xx ANI Txx
+56 00 
+56 FF 
+ANI C0-C255 5x xx ANI Cxx
+5E 00 
+5E FF
+ANDF Xxx 84 xx 01 CD 
+ANDF Yxx 85 xx 01 CD 
+ANDF M0-M1535 8x yy 01 CD ANDF M(xyy-800)
+88 00 
+8D FF 
+ANDF M1536-M3071 Ax yy 01 CD ANDF M(xyy-200)
+A8 00 
+AD FF 
+ANDF M8000-M8255 8F xx 01 CD ANDF Mxx
+8F 00 
+8F FF 
+ANDF S0-S999 8x yy 01 CD ANDF Sxxx
+80 00 
+83 E7 
+ANDF T0-T255 8x yy 01 CD ANDF Txx
+86 00 
+86 FF 
+ANDF C0-C255 8x yy 01 CD ANDF Cxx
+8E 00 
+8E FF
+OR Xxx 64 xx 
+OR Yxx 65 xx 
+OR M0-M1535 6x yy OR M(xyy-800)
+68 00 
+6D FF 
+OR M1536-M3071 Ax yy 01 C6 OR M(xyy-200)
+A8 00 
+AD FF 
+OR M8000-M8255 6F xx OR Mxx
+6F 00 
+6F FF 
+OR S0-S999 6x xx OR Sxxx
+60 00 
+63 E7 
+OR T0-T255 6x xx OR Txx
+66 00 
+66 FF 
+OR C0-C255 6x xx OR Cxx
+6E 00 
+6E FF
+ORP Xxx 84 xx 01 CE 
+ORP Yxx 85 xx 01 CE 
+ORP M0-M1535 8x yy 01 CE ORP M(xyy-800)
+88 00 
+8D FF 
+ORP M1536-M3071 Ax yy 01 CE ORP M(xyy-200)
+A8 00 
+AD FF 
+ORP M8000-M8255 8F xx 01 CE ORP Mxx
+8F 00 
+8F FF 
+ORP S0-S999 8x yy 01 CE ORP Sxxx
+80 00 
+83 E7 
+ORP T0-T255 8x yy 01 CE ORP Txx
+86 00 
+86 FF 
+ORP C0-C255 8x yy 01 CE ORP Cxx
+8E 00 
+8E FF 
+ORI Xxx 74 xx 
+ORI Yxx 75 xx 
+ORI M0-M1535 7x yy ORI M(xyy-800)
+78 00 
+7D FF 
+ORI M1536-M3071 Ax yy 01 C7 ORI M(xyy-200)
+A8 00 
+AD FF 
+ORI M8000-M8255 7F xx ORI Mxx
+7F 00 
+7F FF 
+ORI S0-S999 7x xx ORI Sxxx
+70 00 
+73 E7 
+ORI T0-T255 7x xx ORI Txx
+76 00 
+76 FF 
+ORI C0-C255 7x xx ORI Cxx
+7E 00 
+7E FF 
+ORF Xxx 84 xx 01 CF 
+ORF Yxx 85 xx 01 CF 
+ORF M0-M1535 8x yy 01 CF ORF M(xyy-800)
+88 00 
+8D FF 
+ORF M1536-M3071 Ax yy 01 CF ORF M(xyy-200)
+A8 00 
+AD FF 
+ORF M8000-M8255 8F xx 01 CF ORF Mxx
+8F 00 
+8F FF 
+ORF S0-S999 8x yy 01 CF ORF Sxxx
+80 00 
+83 E7 
+ORF T0-T255 8x yy 01 CF ORF Txx
+86 00 
+86 FF 
+ORF C0-C255 8x yy 01 CF ORF Cxx
+8E 00 
+
+
+
+8E FF 
+PLS Yxx 85 xx 00 08 
+PLS M0-M1535 8x yy 00 08 PLS M(xyy-800)
+88 00 
+8D FF 
+PLS M1536-M3071 Ax yy 00 08 PLS M(xyy-200)
+A8 00 
+AD FF 
+PLF Yxx 85 xx 00 09 
+PLF M0-M1535 8x yy 00 09 PLF M(xyy-800)
+88 00 
+8D FF 
+PLF M1536-M3071 Ax yy 00 09 PLF M(xyy-200)
+A8 00 
+AD FF 
+OUT Yxx C5 xx 
+OUT M0-M1535 Cx yy OUT M(xyy-800)
+C8 00 
+CD FF 
+OUT M1536-M3071 Ax yy 00 02 OUT M(xyy-200)
+A8 00 
+AD FF 
+
+OUT M8000-M8255 8F xx 00 02 OUT M8xxx					/*
+8F 00 
+8F FF 
+
+OUT S0-S999 8x xx 00 05 
+80 00 
+83 E7 
+OUT T0-T255 80 xx 80 yy 06 zz OUT Tzz Kxxyy
+                OO 
+                FF 
+OUT C0-C255 80 xx 80 yy 0E zz OUT CzzKxxyy
+                OO 
+                FF 
+MC Ny Yxx 85 0y 80 xx 00 0A 
+MC Ny M0-M1535 8x yy 80 yy 00 0A MC Ny M(xyy-800)
+88 00 
+8D FF 
+MC Ny M1536-M3071 Ax yy 80 yy 00 0A MC Ny M(xyy-200)
+A8 00 
+AD FF 
+MCR Nx 80 0x 00 0B 
+
+SET Yx D5 xx SET Yx
+SET M0-M1535 zx yy SET M(xyy-800)
+D8 00 
+DD FF 
+SET M1536-M3071 zx yy zz zz SET Mxx
+8F 00 00 03 
+8F FF 00 03 
+SET S0-S999 zx yy zz zz SET Sxyy
+80 00 00 06 
+83 E7 00 06 
+RST Yx E5 xx RST Yx
+RST M0-M1535 zx yy RST M(xyy-800)
+E8 00 
+ED FF 
+RST M1536-M3071 zx yy zz zz RST M(xyy-200)
+A8 00 00 04 
+AD FF 
+RST M8000-M8255 zx yy zz zz RST Myy
+8F 00 00 04 
+8F FF 
+RST S0-S999 zx yy zz zz RST S0-S999
+80 00 00 07 
+83 E7 00 07 
+RST T0-T255 zx yy zz zz RST Tyy
+86 00 00 0C 
+86 FF 
+RST D0-D999 zz xx zz yy zz zz RST D(xxyy/2)
+86 xx 86 yy 00 0D 
+RST D1000-D7000 88 xx 86 yy 00 0D RST D(xxyy/2)+1000
+RST D8000-D8195 80 xx 86 yy 00 0D RST D(xxyy/2+800)
+ANB FF F8
+ORB FF F9
+MPS FF FA
+MRD FF FB
+MPP FF FC
+INV FF FD
+END 00 0F
+
+
+ZRST S0 S999
+60 00 00 84 00 80 e7 84 03 80
+00 60 80 00 00 84 80 03 E7 84
+00 60 ZRST 
+80 XX XX 84 
+
+
+ZRST M0 M3071
+60 00 00 84 08 80 FF 84 2D 80
+00 60 84 00 80 08 84 FF 80 2D****
+00 60 80 08 00 84 80 2D FF 84
+
+ZRST Y0 Y377
+60 00 00 84 05 80 FF 84 05 80
+00 60 80 05 00 84 80 05 FF 84 
+
+ZRST D0 D1000
+60 00 00 86 00 86 00 86 00 88
+00 60 86 00 86 00 86 00 88 00****
+00 60 86 00 00 86 88 00 00 86
